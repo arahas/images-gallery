@@ -31,7 +31,7 @@ def new_image():
         "Authorization": "Client-ID " + UNSPLASH_KEY
     }
     params = {"query": word}
-    response = request.get(url=UNSPLASH_URL, headers=headers, params=params)
+    response = requests.get(url=UNSPLASH_URL, headers=headers, params=params)
     data = response.json()
     return data
 
